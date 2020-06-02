@@ -1,0 +1,140 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 117rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5em 1.7em;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 80%;
+  background: #87ceeb;
+  background: url("../img/bg_w_sun.jpg") repeat-x center / auto 100%;
+  &:before{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+  }
+  &-rain:before{
+    background: url("../img/rain.gif") repeat center;
+  }
+  &-snow:before{
+    background: url("../img/snow.gif") repeat center;
+  }
+  &-winter{
+    background: url("../img/bg_w_winter.png") repeat-x center / auto 100%;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  height: 30%;
+  background-repeat: repeat-x;
+  background-image: url(../img/bg_ground.png), linear-gradient(#a8da81, #8fbb6d);
+  background-position: 0 0, 0 9rem;
+  background-size: auto 10rem, auto;
+}
+
+.gorilla{
+  position: fixed;
+  left: 40%;
+  bottom: 30%;
+  transform: translate(-50%, 7rem);
+  z-index: 5;
+  width: 20rem;
+  img{
+    width: 100%;
+  }
+}
+
+.obstacles{
+  position: fixed;
+  left: 50%;
+  bottom: 30%;
+  margin-bottom: -7rem;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 7.5rem;
+  img{
+    width: 100%;
+  }
+}
+
+.enemies{
+  position: fixed;
+  left: 70%;
+  bottom: 30%;
+  margin-bottom: -7rem;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 10rem;
+  img{
+    width: 100%;
+  }
+}
+
+.trees{
+  position: fixed;
+  left: 10%;
+  bottom: 30%;
+  margin-bottom: -5rem;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 22rem;
+  img{
+    height: 100%;
+  }
+}
+
+.finish{
+  position: fixed;
+  left: 80%;
+  bottom: 30%;
+  margin-bottom: -7rem;
+  z-index: 6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 7rem;
+  img{
+    width: 100%;
+  }
+}
